@@ -1,0 +1,11 @@
+// to display it in grid format of squares
+main {
+  display: grid;
+  grid-template-columns: 75px 75px 75px;
+  grid-gap: 0px;
+}
+// specifying border and height of grid
+app-square {
+  border: 1px gray solid;
+  height: 75px;
+}

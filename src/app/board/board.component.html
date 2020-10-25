@@ -1,0 +1,16 @@
+<!-- to display the player name -->
+<h4>
+    Current Player : {{ player }}
+</h4>
+<!-- button to start new game -->
+<button nbButton outline status="success" (click)="newGame()">Start new Game</button><br><br>
+<!-- will display the winner as soon as the game is complete -->
+<h6 *ngIf="winner">
+    Player {{winner}} won the game !!!!!!
+</h6>
+<!-- tic tac toe square where game actually starts with two players -->
+<main>
+    <app-square *ngFor='let val of squares; let i = index'
+    [value] = "val"
+    (click) = 'makeMove(i)'></app-square>
+</main>
